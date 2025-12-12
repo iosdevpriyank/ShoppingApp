@@ -29,6 +29,7 @@ final class ProductsViewModel {
         
         do {
             products = try await productAPI.fetchProducts()
+            await analytics.logScreenView("products")
         } catch {
             errorMessage = "Failed to load products: \(error.localizedDescription)"
         }
