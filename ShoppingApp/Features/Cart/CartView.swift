@@ -78,6 +78,7 @@ struct CartView: View {
                 }
             }
             .navigationTitle("Cart")
+            .navigationBarTitleDisplayMode(.inline)
             .task {
                 await cartVM.loadCart()
             }

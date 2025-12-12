@@ -47,6 +47,7 @@ struct ProductsView: View {
                 }
             }
             .navigationTitle("Products")
+            .navigationBarTitleDisplayMode(.inline)
             .task {
                 await productsVM.loadProducts()
             }
